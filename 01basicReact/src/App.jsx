@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Card from './components/Card'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,13 +20,19 @@ function App() {
       setCount(count-1) ; 
     }
    }
+
+
+  //  let productName = ""
   return (
     <>
-      <h1>Chai Aur React</h1>
-      <h2>Counter Value :- {count} </h2>
+       <h1 className='bg-green-500 text-black p-4 rounded-xl mb-4'>Tailwind test</h1>
+       <div className='sm:grid sm:grid-cols-3 gap-5'>
 
-      <button onClick={addValue} type="button">Add Value</button>
-      <button onClick={removeValue} type="button">Remove Value</button>
+       <Card productName = "Apple" btnText = "click me" />
+       <Card productName="Samsung" btnText = "read me "/>
+       <Card productName="HP" btnText = "About me "/>
+
+       </div>
     </>
   )
 }
